@@ -1,0 +1,153 @@
+{
+  "topology": "linear",
+  "bw_mbps": 100,
+  "delay": "5ms",
+  "ping_loss_pct": 0.0,
+  "tests": {
+    "baseline": {
+      "tcp_baseline": {
+        "label": "TCP Baseline",
+        "protocol": "TCP",
+        "summary": {
+          "Mbps": 93.42,
+          "retransmits": 2
+        },
+        "intervals": [
+          {
+            "start": 0.0,
+            "Mbps": 91.2
+          },
+          {
+            "start": 1.0,
+            "Mbps": 94.1
+          },
+          {
+            "start": 2.0,
+            "Mbps": 92.8
+          },
+          {
+            "start": 3.0,
+            "Mbps": 95.3
+          },
+          {
+            "start": 4.0,
+            "Mbps": 93.7
+          },
+          {
+            "start": 5.0,
+            "Mbps": 94.0
+          },
+          {
+            "start": 6.0,
+            "Mbps": 92.1
+          },
+          {
+            "start": 7.0,
+            "Mbps": 93.5
+          },
+          {
+            "start": 8.0,
+            "Mbps": 94.2
+          },
+          {
+            "start": 9.0,
+            "Mbps": 93.0
+          }
+        ]
+      },
+      "udp_baseline": {
+        "label": "UDP Baseline",
+        "protocol": "UDP",
+        "summary": {
+          "Mbps": 97.82,
+          "jitter_ms": 0.23,
+          "lost_pct": 0.12
+        },
+        "intervals": [
+          {
+            "start": 0.0,
+            "Mbps": 97.5
+          },
+          {
+            "start": 1.0,
+            "Mbps": 98.1
+          },
+          {
+            "start": 2.0,
+            "Mbps": 97.8
+          },
+          {
+            "start": 3.0,
+            "Mbps": 98.3
+          },
+          {
+            "start": 4.0,
+            "Mbps": 97.6
+          },
+          {
+            "start": 5.0,
+            "Mbps": 98.0
+          }
+        ]
+      }
+    },
+    "parallel_streams": {
+      "parallel_1": {
+        "label": "TCP 1 stream",
+        "summary": {
+          "Mbps": 93.42
+        }
+      },
+      "parallel_2": {
+        "label": "TCP 2 streams",
+        "summary": {
+          "Mbps": 94.81
+        }
+      },
+      "parallel_4": {
+        "label": "TCP 4 streams",
+        "summary": {
+          "Mbps": 95.71
+        }
+      },
+      "parallel_8": {
+        "label": "TCP 8 streams",
+        "summary": {
+          "Mbps": 96.12
+        }
+      }
+    },
+    "window_sizes": {
+      "window_16K": {
+        "label": "TCP win=16K",
+        "summary": {
+          "Mbps": 52.34
+        }
+      },
+      "window_64K": {
+        "label": "TCP win=64K",
+        "summary": {
+          "Mbps": 81.76
+        }
+      },
+      "window_128K": {
+        "label": "TCP win=128K",
+        "summary": {
+          "Mbps": 90.23
+        }
+      },
+      "window_256K": {
+        "label": "TCP win=256K",
+        "summary": {
+          "Mbps": 93.14
+        }
+      },
+      "window_512K": {
+        "label": "TCP win=512K",
+        "summary": {
+          "Mbps": 93.89
+        }
+      }
+    }
+  }
+}

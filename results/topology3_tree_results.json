@@ -1,0 +1,61 @@
+{
+  "topology": "tree",
+  "bw_mbps": 100,
+  "delay": "3ms",
+  "ping_loss_pct": 0.0,
+  "tests": {
+    "intra_subtree": {
+      "h1_to_h2": {
+        "label": "h1->h2 intra-left",
+        "summary": {
+          "Mbps": 91.23
+        }
+      },
+      "h3_to_h4": {
+        "label": "h3->h4 intra-right",
+        "summary": {
+          "Mbps": 90.87
+        }
+      }
+    },
+    "inter_subtree": {
+      "h1_to_h3": {
+        "label": "h1->h3 inter",
+        "summary": {
+          "Mbps": 88.41
+        }
+      },
+      "h2_to_h4": {
+        "label": "h2->h4 inter",
+        "summary": {
+          "Mbps": 87.92
+        }
+      },
+      "h1_to_h3_udp": {
+        "label": "h1->h3 UDP",
+        "summary": {
+          "Mbps": 95.67,
+          "jitter_ms": 0.41
+        }
+      }
+    },
+    "ping_rtt": {
+      "h1_to_h2": {
+        "rtt_avg": 6.23,
+        "hops": 1
+      },
+      "h3_to_h4": {
+        "rtt_avg": 6.18,
+        "hops": 1
+      },
+      "h1_to_h3": {
+        "rtt_avg": 16.54,
+        "hops": 3
+      },
+      "h2_to_h4": {
+        "rtt_avg": 16.71,
+        "hops": 3
+      }
+    }
+  }
+}

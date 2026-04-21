@@ -1,0 +1,1459 @@
+Fri Apr 17 09:42:30 AM IST 2026: Starting full test suite with POX
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Scenario 1: Forwarding & Throughput                     ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[1;33m[STEP] Running scenario1_forwarding.py ...[0m
+(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+*** Configuring hosts
+h1 h2 
+*** Starting controller
+
+*** Starting 1 switches
+s1 (100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+...(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+
+*** Ping: testing ping reachability
+h1 -> h2 
+h2 -> h1 
+*** Results: 0% dropped (2/2 received)
+*** Stopping 0 controllers
+
+*** Stopping 2 links
+..
+*** Stopping 1 switches
+s1 
+*** Stopping 2 hosts
+h1 h2 
+*** Done
+[0;32m[OK]   Scenario 1 complete[0m
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Scenario 2: Firewall (Allowed vs Blocked)               ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[1;33m[STEP] Running scenario2_firewall.py ...[0m
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+*** Configuring hosts
+h1 h2 h3 
+*** Starting controller
+
+*** Starting 1 switches
+s1 (100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+...(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+
+*** Ping: testing ping reachability
+h1 -> h2 h3 
+h2 -> h1 h3 
+h3 -> h1 h2 
+*** Results: 0% dropped (6/6 received)
+*** Stopping 0 controllers
+
+*** Stopping 3 links
+...
+*** Stopping 1 switches
+s1 
+*** Stopping 3 hosts
+h1 h2 h3 
+*** Done
+[0;32m[OK]   Scenario 2 complete[0m
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Scenario 3: QoS Rate Limiting                           ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[1;33m[STEP] Running scenario3_qos.py ...[0m
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+*** Configuring hosts
+h1 h2 h3 h4 
+*** Starting controller
+
+*** Starting 1 switches
+s1 (100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+...(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+
+*** Ping: testing ping reachability
+h1 -> h2 h3 h4 
+h2 -> h1 h3 h4 
+h3 -> h1 h2 h4 
+h4 -> h1 h2 h3 
+*** Results: 0% dropped (12/12 received)
+*** Stopping 0 controllers
+
+*** Stopping 4 links
+....
+*** Stopping 1 switches
+s1 
+*** Stopping 4 hosts
+h1 h2 h3 h4 
+*** Done
+[0;32m[OK]   Scenario 3 complete[0m
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Topology: Linear                                        ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[1;33m[STEP] Starting POX controller...[0m
+[1;33m[STEP] Running linear_topo.py ...[0m
+
+==============================================================
+ TOPOLOGY 1 — Linear Point-to-Point
+ h1(10.0.0.1) --[s1]-- h2(10.0.0.2)
+ bw=100 Mbps  delay=5ms
+==============================================================
+Unable to contact the remote controller at 127.0.0.1:6633
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+*** Configuring hosts
+h1 h2 
+*** Starting controller
+c0 
+*** Starting 1 switches
+s1 (100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+...(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+
+[*] Waiting for controller handshake (5s)...
+[*] Connectivity check:
+*** Ping: testing ping reachability
+h1 -> X 
+h2 -> X 
+*** Results: 100% dropped (0/2 received)
+
+  -- Baseline TCP --
+    [iperf3] TCP Baseline: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J
+    >> TCP Baseline: 0.00 Mbps
+
+  -- Baseline UDP --
+    [iperf3] UDP Baseline: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -u -b 100M
+    >> UDP Baseline: 99.99 Mbps
+
+  -- Parallel streams N=1 --
+    [iperf3] TCP 1 stream(s): iperf3 -c 10.0.0.1 -p 5201 -t 10 -J
+    >> TCP 1 stream(s): 94.69 Mbps
+
+  -- Parallel streams N=2 --
+    [iperf3] TCP 2 stream(s): iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -P 2
+    >> TCP 2 stream(s): 94.77 Mbps
+
+  -- Parallel streams N=4 --
+    [iperf3] TCP 4 stream(s): iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -P 4
+    >> TCP 4 stream(s): 94.95 Mbps
+
+  -- Parallel streams N=8 --
+    [iperf3] TCP 8 stream(s): iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -P 8
+    >> TCP 8 stream(s): 94.80 Mbps
+
+  -- Window size 16K --
+    [iperf3] TCP win=16K: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -w 16K
+    >> TCP win=16K: 7.22 Mbps
+
+  -- Window size 64K --
+    [iperf3] TCP win=64K: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -w 64K
+    >> TCP win=64K: 35.15 Mbps
+
+  -- Window size 128K --
+    [iperf3] TCP win=128K: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -w 128K
+    >> TCP win=128K: 70.92 Mbps
+
+  -- Window size 256K --
+    [iperf3] TCP win=256K: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -w 256K
+    >> TCP win=256K: 94.56 Mbps
+
+  -- Window size 512K --
+    [iperf3] TCP win=512K: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -w 512K
+    >> TCP win=512K: 94.58 Mbps
+
+[*] Flow table (s1):
+
+*** Stopping 1 controllers
+c0 
+*** Stopping 2 links
+..
+*** Stopping 1 switches
+s1 
+*** Stopping 2 hosts
+h1 h2 
+*** Done
+[*] Results saved -> /tmp/sdn_results/topology1_linear_results.json
+[0;32m[OK]   Linear complete[0m
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Topology: Star                                          ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[1;33m[STEP] Starting POX controller...[0m
+[1;33m[STEP] Running star_topo.py ...[0m
+
+==============================================================
+ TOPOLOGY 2 — Star
+        h1 (server)
+         |[s1]
+ h2  h3  h4 (clients)
+ bw=100 Mbps  delay=2ms
+==============================================================
+Unable to contact the remote controller at 127.0.0.1:6633
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+*** Configuring hosts
+h1 h2 h3 h4 
+*** Starting controller
+c0 
+*** Starting 1 switches
+s1 (100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+...(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+
+[*] Waiting for controller handshake (5s)...
+[*] Connectivity check:
+*** Ping: testing ping reachability
+h1 -> X X X 
+h2 -> h1 h3 h4 
+h3 -> h1 h2 h4 
+h4 -> h1 h2 h3 
+*** Results: 25% dropped (9/12 received)
+
+  -- Sequential: h2 -> h1 --
+    [iperf3] h2->h1 seq: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J
+    >> h2->h1 seq: 95.21 Mbps
+
+  -- Sequential: h3 -> h1 --
+    [iperf3] h3->h1 seq: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J
+    >> h3->h1 seq: 95.31 Mbps
+
+  -- Sequential: h4 -> h1 --
+    [iperf3] h4->h1 seq: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J
+    >> h4->h1 seq: 95.31 Mbps
+
+[*] Flow table (s1):
+
+*** Stopping 1 controllers
+c0 
+*** Stopping 4 links
+....
+*** Stopping 1 switches
+s1 
+*** Stopping 4 hosts
+h1 h2 h3 h4 
+*** Done
+[*] Results saved -> /tmp/sdn_results/topology2_star_results.json
+[0;32m[OK]   Star complete[0m
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Topology: Tree                                          ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[1;33m[STEP] Starting POX controller...[0m
+[1;33m[STEP] Running tree_topo.py ...[0m
+/home/nimay/Desktop/bandwidth-analysis-sdn/topologies/tree_topo.py:2: SyntaxWarning: invalid escape sequence '\ '
+  """
+
+==============================================================
+ TOPOLOGY 3 — Tree (2 levels)
+         [s1]  (core)
+        /     \
+     [s2]     [s3]
+     / \       / \
+   h1   h2   h3   h4
+ bw=100 Mbps  edge_delay=3ms  core_delay=5ms
+==============================================================
+Unable to contact the remote controller at 127.0.0.1:6633
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+*** Configuring hosts
+h1 h2 h3 h4 
+*** Starting controller
+c0 
+*** Starting 3 switches
+s1 (100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+s2 (100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+s3 (100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+...(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+
+[*] Waiting for controller handshake (5s)...
+[*] Connectivity check:
+*** Ping: testing ping reachability
+h1 -> X X X 
+h2 -> h1 h3 h4 
+h3 -> h1 h2 h4 
+h4 -> h1 h2 h3 
+*** Results: 25% dropped (9/12 received)
+
+  -- Intra: h1 -> h2 (same subtree, ~1 hop) --
+    [iperf3] h1->h2 intra-left: iperf3 -c 10.0.0.2 -p 5201 -t 10 -J
+    >> h1->h2 intra-left: 95.03 Mbps
+
+  -- Intra: h3 -> h4 (same subtree, ~1 hop) --
+    [iperf3] h3->h4 intra-right: iperf3 -c 10.0.0.4 -p 5201 -t 10 -J
+    >> h3->h4 intra-right: 95.10 Mbps
+
+  -- Inter: h1 -> h3 (cross-subtree, ~3 hops) --
+    [iperf3] h1->h3 inter-subtree: iperf3 -c 10.0.0.3 -p 5201 -t 10 -J
+    >> h1->h3 inter-subtree: 93.98 Mbps
+
+  -- Inter: h2 -> h4 (cross-subtree, ~3 hops) --
+    [iperf3] h2->h4 inter-subtree: iperf3 -c 10.0.0.4 -p 5201 -t 10 -J
+    >> h2->h4 inter-subtree: 93.97 Mbps
+
+  -- Inter: h1 -> h3 UDP --
+    [iperf3] h1->h3 UDP inter: iperf3 -c 10.0.0.3 -p 5201 -t 10 -J -u -b 100M
+    >> h1->h3 UDP inter: 99.99 Mbps
+
+  -- Ping: h1 -> h2 (intra-left, ~1 hops) --
+PING 10.0.0.2 (10.0.0.2) 56(84) bytes of data.
+64 bytes from 10.0.0.2: icmp_seq=1 ttl=64 time=12.3 ms
+64 bytes from 10.0.0.2: icmp_seq=2 ttl=64 time=15.1 ms
+64 bytes from 10.0.0.2: icmp_seq=3 ttl=64 time=15.2 ms
+64 bytes from 10.0.0.2: icmp_seq=4 ttl=64 time=15.2 ms
+64 bytes from 10.0.0.2: icmp_seq=5 ttl=64 time=14.8 ms
+64 bytes from 10.0.0.2: icmp_seq=6 ttl=64 time=15.1 ms
+64 bytes from 10.0.0.2: icmp_seq=7 ttl=64 time=14.6 ms
+64 bytes from 10.0.0.2: icmp_seq=8 ttl=64 time=15.1 ms
+64 bytes from 10.0.0.2: icmp_seq=9 ttl=64 time=15.2 ms
+64 bytes from 10.0.0.2: icmp_seq=10 ttl=64 time=14.7 ms
+
+--- 10.0.0.2 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 1829ms
+rtt min/avg/max/mdev = 12.285/14.743/15.236/0.844 ms
+
+
+  -- Ping: h3 -> h4 (intra-right, ~1 hops) --
+PING 10.0.0.4 (10.0.0.4) 56(84) bytes of data.
+64 bytes from 10.0.0.4: icmp_seq=1 ttl=64 time=23.6 ms
+64 bytes from 10.0.0.4: icmp_seq=2 ttl=64 time=13.8 ms
+64 bytes from 10.0.0.4: icmp_seq=3 ttl=64 time=15.2 ms
+64 bytes from 10.0.0.4: icmp_seq=4 ttl=64 time=14.7 ms
+64 bytes from 10.0.0.4: icmp_seq=5 ttl=64 time=14.5 ms
+64 bytes from 10.0.0.4: icmp_seq=6 ttl=64 time=15.2 ms
+64 bytes from 10.0.0.4: icmp_seq=7 ttl=64 time=15.2 ms
+64 bytes from 10.0.0.4: icmp_seq=8 ttl=64 time=15.1 ms
+64 bytes from 10.0.0.4: icmp_seq=9 ttl=64 time=15.2 ms
+64 bytes from 10.0.0.4: icmp_seq=10 ttl=64 time=14.6 ms
+
+--- 10.0.0.4 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 1821ms
+rtt min/avg/max/mdev = 13.772/15.702/23.619/2.675 ms
+
+
+  -- Ping: h1 -> h3 (inter, ~3 hops) --
+PING 10.0.0.3 (10.0.0.3) 56(84) bytes of data.
+64 bytes from 10.0.0.3: icmp_seq=1 ttl=64 time=41.6 ms
+64 bytes from 10.0.0.3: icmp_seq=2 ttl=64 time=40.1 ms
+64 bytes from 10.0.0.3: icmp_seq=3 ttl=64 time=40.1 ms
+64 bytes from 10.0.0.3: icmp_seq=4 ttl=64 time=39.8 ms
+64 bytes from 10.0.0.3: icmp_seq=5 ttl=64 time=40.1 ms
+64 bytes from 10.0.0.3: icmp_seq=6 ttl=64 time=38.6 ms
+64 bytes from 10.0.0.3: icmp_seq=7 ttl=64 time=39.0 ms
+64 bytes from 10.0.0.3: icmp_seq=8 ttl=64 time=40.1 ms
+64 bytes from 10.0.0.3: icmp_seq=9 ttl=64 time=39.6 ms
+64 bytes from 10.0.0.3: icmp_seq=10 ttl=64 time=40.2 ms
+
+--- 10.0.0.3 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 1824ms
+rtt min/avg/max/mdev = 38.612/39.912/41.648/0.769 ms
+
+
+  -- Ping: h2 -> h4 (inter, ~3 hops) --
+PING 10.0.0.4 (10.0.0.4) 56(84) bytes of data.
+64 bytes from 10.0.0.4: icmp_seq=1 ttl=64 time=42.8 ms
+64 bytes from 10.0.0.4: icmp_seq=2 ttl=64 time=38.8 ms
+64 bytes from 10.0.0.4: icmp_seq=3 ttl=64 time=40.1 ms
+64 bytes from 10.0.0.4: icmp_seq=4 ttl=64 time=40.2 ms
+64 bytes from 10.0.0.4: icmp_seq=5 ttl=64 time=39.9 ms
+64 bytes from 10.0.0.4: icmp_seq=6 ttl=64 time=38.9 ms
+64 bytes from 10.0.0.4: icmp_seq=7 ttl=64 time=38.5 ms
+64 bytes from 10.0.0.4: icmp_seq=8 ttl=64 time=40.1 ms
+64 bytes from 10.0.0.4: icmp_seq=9 ttl=64 time=40.1 ms
+64 bytes from 10.0.0.4: icmp_seq=10 ttl=64 time=38.8 ms
+
+--- 10.0.0.4 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 1825ms
+rtt min/avg/max/mdev = 38.520/39.816/42.806/1.174 ms
+
+
+[*] Flow table (s1):
+
+
+[*] Flow table (s2):
+
+
+[*] Flow table (s3):
+
+*** Stopping 1 controllers
+c0 
+*** Stopping 6 links
+......
+*** Stopping 3 switches
+s1 s2 s3 
+*** Stopping 4 hosts
+h1 h2 h3 h4 
+*** Done
+[*] Results saved -> /tmp/sdn_results/topology3_tree_results.json
+[0;32m[OK]   Tree complete[0m
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Generating Analysis Graphs                              ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+Traceback (most recent call last):
+  File "/home/nimay/Desktop/bandwidth-analysis-sdn/analysis/analyze_results.py", line 21, in <module>
+    RESULTS_DIR = os.path.join(PROJECT_DIR, 'results')
+                               ^^^^^^^^^^^
+NameError: name 'PROJECT_DIR' is not defined
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  All Done                                                ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[0;32mCheck /home/nimay/Desktop/bandwidth-analysis-sdn/results for JSON results and graphs.[0m
+Fri Apr 17 09:51:26 AM IST 2026: Starting full test suite with POX
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Scenario 1: Forwarding & Throughput                     ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[1;33m[STEP] Running scenario1_forwarding.py ...[0m
+(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+*** Configuring hosts
+h1 h2 
+*** Starting controller
+
+*** Starting 1 switches
+s1 (100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+...(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+
+*** Ping: testing ping reachability
+h1 -> h2 
+h2 -> h1 
+*** Results: 0% dropped (2/2 received)
+*** Stopping 0 controllers
+
+*** Stopping 2 links
+..
+*** Stopping 1 switches
+s1 
+*** Stopping 2 hosts
+h1 h2 
+*** Done
+[0;32m[OK]   Scenario 1 complete[0m
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Scenario 2: Firewall (Allowed vs Blocked)               ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[1;33m[STEP] Running scenario2_firewall.py ...[0m
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+*** Configuring hosts
+h1 h2 h3 
+*** Starting controller
+
+*** Starting 1 switches
+s1 (100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+...(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+
+*** Ping: testing ping reachability
+h1 -> h2 h3 
+h2 -> h1 h3 
+h3 -> h1 h2 
+*** Results: 0% dropped (6/6 received)
+*** Stopping 0 controllers
+
+*** Stopping 3 links
+...
+*** Stopping 1 switches
+s1 
+*** Stopping 3 hosts
+h1 h2 h3 
+*** Done
+[0;32m[OK]   Scenario 2 complete[0m
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Scenario 3: QoS Rate Limiting                           ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[1;33m[STEP] Running scenario3_qos.py ...[0m
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+*** Configuring hosts
+h1 h2 h3 h4 
+*** Starting controller
+
+*** Starting 1 switches
+s1 (100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+...(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+
+*** Ping: testing ping reachability
+h1 -> h2 h3 h4 
+h2 -> h1 h3 h4 
+h3 -> h1 h2 h4 
+h4 -> h1 h2 h3 
+*** Results: 0% dropped (12/12 received)
+*** Stopping 0 controllers
+
+*** Stopping 4 links
+....
+*** Stopping 1 switches
+s1 
+*** Stopping 4 hosts
+h1 h2 h3 h4 
+*** Done
+[0;32m[OK]   Scenario 3 complete[0m
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Topology: Linear                                        ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[1;33m[STEP] Starting POX controller...[0m
+[1;33m[STEP] Running linear_topo.py ...[0m
+
+==============================================================
+ TOPOLOGY 1 — Linear Point-to-Point
+ h1(10.0.0.1) --[s1]-- h2(10.0.0.2)
+ bw=100 Mbps  delay=5ms
+==============================================================
+Unable to contact the remote controller at 127.0.0.1:6633
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+*** Configuring hosts
+h1 h2 
+*** Starting controller
+c0 
+*** Starting 1 switches
+s1 (100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+...(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+
+[*] Waiting for controller handshake (5s)...
+[*] Connectivity check:
+*** Ping: testing ping reachability
+h1 -> X 
+h2 -> X 
+*** Results: 100% dropped (0/2 received)
+
+  -- Baseline TCP --
+    [iperf3] TCP Baseline: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J
+    >> TCP Baseline: 0.00 Mbps
+
+  -- Baseline UDP --
+    [iperf3] UDP Baseline: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -u -b 100M
+    >> UDP Baseline: 99.99 Mbps
+
+  -- Parallel streams N=1 --
+    [iperf3] TCP 1 stream(s): iperf3 -c 10.0.0.1 -p 5201 -t 10 -J
+    >> TCP 1 stream(s): 94.62 Mbps
+
+  -- Parallel streams N=2 --
+    [iperf3] TCP 2 stream(s): iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -P 2
+    >> TCP 2 stream(s): 94.82 Mbps
+
+  -- Parallel streams N=4 --
+    [iperf3] TCP 4 stream(s): iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -P 4
+    >> TCP 4 stream(s): 94.94 Mbps
+
+  -- Parallel streams N=8 --
+    [iperf3] TCP 8 stream(s): iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -P 8
+    >> TCP 8 stream(s): 94.89 Mbps
+
+  -- Window size 16K --
+    [iperf3] TCP win=16K: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -w 16K
+    >> TCP win=16K: 7.11 Mbps
+
+  -- Window size 64K --
+    [iperf3] TCP win=64K: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -w 64K
+    >> TCP win=64K: 35.87 Mbps
+
+  -- Window size 128K --
+    [iperf3] TCP win=128K: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -w 128K
+    >> TCP win=128K: 71.11 Mbps
+
+  -- Window size 256K --
+    [iperf3] TCP win=256K: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -w 256K
+    >> TCP win=256K: 94.53 Mbps
+
+  -- Window size 512K --
+    [iperf3] TCP win=512K: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -w 512K
+    >> TCP win=512K: 94.57 Mbps
+
+[*] Flow table (s1):
+
+*** Stopping 1 controllers
+c0 
+*** Stopping 2 links
+..
+*** Stopping 1 switches
+s1 
+*** Stopping 2 hosts
+h1 h2 
+*** Done
+[*] Results saved -> /tmp/sdn_results/topology1_linear_results.json
+[0;32m[OK]   Linear complete[0m
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Topology: Star                                          ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[1;33m[STEP] Starting POX controller...[0m
+[1;33m[STEP] Running star_topo.py ...[0m
+
+==============================================================
+ TOPOLOGY 2 — Star
+        h1 (server)
+         |[s1]
+ h2  h3  h4 (clients)
+ bw=100 Mbps  delay=2ms
+==============================================================
+Unable to contact the remote controller at 127.0.0.1:6633
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+*** Configuring hosts
+h1 h2 h3 h4 
+*** Starting controller
+c0 
+*** Starting 1 switches
+s1 (100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+...(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+
+[*] Waiting for controller handshake (5s)...
+[*] Connectivity check:
+*** Ping: testing ping reachability
+h1 -> X X X 
+h2 -> h1 h3 h4 
+h3 -> h1 h2 h4 
+h4 -> h1 h2 h3 
+*** Results: 25% dropped (9/12 received)
+
+  -- Sequential: h2 -> h1 --
+    [iperf3] h2->h1 seq: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J
+    >> h2->h1 seq: 95.29 Mbps
+
+  -- Sequential: h3 -> h1 --
+    [iperf3] h3->h1 seq: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J
+    >> h3->h1 seq: 95.34 Mbps
+
+  -- Sequential: h4 -> h1 --
+    [iperf3] h4->h1 seq: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J
+    >> h4->h1 seq: 95.32 Mbps
+
+[*] Flow table (s1):
+
+*** Stopping 1 controllers
+c0 
+*** Stopping 4 links
+....
+*** Stopping 1 switches
+s1 
+*** Stopping 4 hosts
+h1 h2 h3 h4 
+*** Done
+[*] Results saved -> /tmp/sdn_results/topology2_star_results.json
+[0;32m[OK]   Star complete[0m
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Topology: Tree                                          ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[1;33m[STEP] Starting POX controller...[0m
+[1;33m[STEP] Running tree_topo.py ...[0m
+/home/nimay/Desktop/bandwidth-analysis-sdn/topologies/tree_topo.py:2: SyntaxWarning: invalid escape sequence '\ '
+  """
+
+==============================================================
+ TOPOLOGY 3 — Tree (2 levels)
+         [s1]  (core)
+        /     \
+     [s2]     [s3]
+     / \       / \
+   h1   h2   h3   h4
+ bw=100 Mbps  edge_delay=3ms  core_delay=5ms
+==============================================================
+Unable to contact the remote controller at 127.0.0.1:6633
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+*** Configuring hosts
+h1 h2 h3 h4 
+*** Starting controller
+c0 
+*** Starting 3 switches
+s1 (100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+s2 (100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+s3 (100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+...(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+
+[*] Waiting for controller handshake (5s)...
+[*] Connectivity check:
+*** Ping: testing ping reachability
+h1 -> X X X 
+h2 -> h1 h3 h4 
+h3 -> h1 h2 h4 
+h4 -> h1 h2 h3 
+*** Results: 25% dropped (9/12 received)
+
+  -- Intra: h1 -> h2 (same subtree, ~1 hop) --
+    [iperf3] h1->h2 intra-left: iperf3 -c 10.0.0.2 -p 5201 -t 10 -J
+    >> h1->h2 intra-left: 95.04 Mbps
+
+  -- Intra: h3 -> h4 (same subtree, ~1 hop) --
+    [iperf3] h3->h4 intra-right: iperf3 -c 10.0.0.4 -p 5201 -t 10 -J
+    >> h3->h4 intra-right: 95.04 Mbps
+
+  -- Inter: h1 -> h3 (cross-subtree, ~3 hops) --
+    [iperf3] h1->h3 inter-subtree: iperf3 -c 10.0.0.3 -p 5201 -t 10 -J
+    >> h1->h3 inter-subtree: 94.01 Mbps
+
+  -- Inter: h2 -> h4 (cross-subtree, ~3 hops) --
+    [iperf3] h2->h4 inter-subtree: iperf3 -c 10.0.0.4 -p 5201 -t 10 -J
+    >> h2->h4 inter-subtree: 94.00 Mbps
+
+  -- Inter: h1 -> h3 UDP --
+    [iperf3] h1->h3 UDP inter: iperf3 -c 10.0.0.3 -p 5201 -t 10 -J -u -b 100M
+    >> h1->h3 UDP inter: 99.99 Mbps
+
+  -- Ping: h1 -> h2 (intra-left, ~1 hops) --
+PING 10.0.0.2 (10.0.0.2) 56(84) bytes of data.
+64 bytes from 10.0.0.2: icmp_seq=1 ttl=64 time=12.9 ms
+64 bytes from 10.0.0.2: icmp_seq=2 ttl=64 time=15.0 ms
+64 bytes from 10.0.0.2: icmp_seq=3 ttl=64 time=15.2 ms
+64 bytes from 10.0.0.2: icmp_seq=4 ttl=64 time=14.5 ms
+64 bytes from 10.0.0.2: icmp_seq=5 ttl=64 time=15.2 ms
+64 bytes from 10.0.0.2: icmp_seq=6 ttl=64 time=15.1 ms
+64 bytes from 10.0.0.2: icmp_seq=7 ttl=64 time=14.6 ms
+64 bytes from 10.0.0.2: icmp_seq=8 ttl=64 time=15.1 ms
+64 bytes from 10.0.0.2: icmp_seq=9 ttl=64 time=15.2 ms
+64 bytes from 10.0.0.2: icmp_seq=10 ttl=64 time=15.1 ms
+
+--- 10.0.0.2 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 1830ms
+rtt min/avg/max/mdev = 12.933/14.791/15.184/0.657 ms
+
+
+  -- Ping: h3 -> h4 (intra-right, ~1 hops) --
+PING 10.0.0.4 (10.0.0.4) 56(84) bytes of data.
+64 bytes from 10.0.0.4: icmp_seq=1 ttl=64 time=20.8 ms
+64 bytes from 10.0.0.4: icmp_seq=2 ttl=64 time=15.2 ms
+64 bytes from 10.0.0.4: icmp_seq=3 ttl=64 time=14.7 ms
+64 bytes from 10.0.0.4: icmp_seq=4 ttl=64 time=14.7 ms
+64 bytes from 10.0.0.4: icmp_seq=5 ttl=64 time=15.1 ms
+64 bytes from 10.0.0.4: icmp_seq=6 ttl=64 time=14.9 ms
+64 bytes from 10.0.0.4: icmp_seq=7 ttl=64 time=15.2 ms
+64 bytes from 10.0.0.4: icmp_seq=8 ttl=64 time=15.3 ms
+64 bytes from 10.0.0.4: icmp_seq=9 ttl=64 time=15.2 ms
+64 bytes from 10.0.0.4: icmp_seq=10 ttl=64 time=15.0 ms
+
+--- 10.0.0.4 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 1827ms
+rtt min/avg/max/mdev = 14.653/15.602/20.757/1.729 ms
+
+
+  -- Ping: h1 -> h3 (inter, ~3 hops) --
+PING 10.0.0.3 (10.0.0.3) 56(84) bytes of data.
+64 bytes from 10.0.0.3: icmp_seq=1 ttl=64 time=41.1 ms
+64 bytes from 10.0.0.3: icmp_seq=2 ttl=64 time=40.1 ms
+64 bytes from 10.0.0.3: icmp_seq=3 ttl=64 time=39.2 ms
+64 bytes from 10.0.0.3: icmp_seq=4 ttl=64 time=39.2 ms
+64 bytes from 10.0.0.3: icmp_seq=5 ttl=64 time=39.8 ms
+64 bytes from 10.0.0.3: icmp_seq=6 ttl=64 time=35.9 ms
+64 bytes from 10.0.0.3: icmp_seq=7 ttl=64 time=39.3 ms
+64 bytes from 10.0.0.3: icmp_seq=8 ttl=64 time=38.9 ms
+64 bytes from 10.0.0.3: icmp_seq=9 ttl=64 time=40.0 ms
+64 bytes from 10.0.0.3: icmp_seq=10 ttl=64 time=40.2 ms
+
+--- 10.0.0.3 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 1830ms
+rtt min/avg/max/mdev = 35.897/39.366/41.068/1.301 ms
+
+
+  -- Ping: h2 -> h4 (inter, ~3 hops) --
+PING 10.0.0.4 (10.0.0.4) 56(84) bytes of data.
+64 bytes from 10.0.0.4: icmp_seq=1 ttl=64 time=42.9 ms
+64 bytes from 10.0.0.4: icmp_seq=2 ttl=64 time=40.2 ms
+64 bytes from 10.0.0.4: icmp_seq=3 ttl=64 time=40.3 ms
+64 bytes from 10.0.0.4: icmp_seq=4 ttl=64 time=40.2 ms
+64 bytes from 10.0.0.4: icmp_seq=5 ttl=64 time=39.9 ms
+64 bytes from 10.0.0.4: icmp_seq=6 ttl=64 time=38.1 ms
+64 bytes from 10.0.0.4: icmp_seq=7 ttl=64 time=38.0 ms
+64 bytes from 10.0.0.4: icmp_seq=8 ttl=64 time=39.2 ms
+64 bytes from 10.0.0.4: icmp_seq=9 ttl=64 time=40.1 ms
+64 bytes from 10.0.0.4: icmp_seq=10 ttl=64 time=39.2 ms
+
+--- 10.0.0.4 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 1833ms
+rtt min/avg/max/mdev = 38.024/39.819/42.938/1.312 ms
+
+
+[*] Flow table (s1):
+
+
+[*] Flow table (s2):
+
+
+[*] Flow table (s3):
+
+*** Stopping 1 controllers
+c0 
+*** Stopping 6 links
+......
+*** Stopping 3 switches
+s1 s2 s3 
+*** Stopping 4 hosts
+h1 h2 h3 h4 
+*** Done
+[*] Results saved -> /tmp/sdn_results/topology3_tree_results.json
+[0;32m[OK]   Tree complete[0m
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Generating Analysis Graphs                              ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+
+==============================================================
+ BANDWIDTH MEASUREMENT & ANALYSIS — RESULTS SUMMARY
+==============================================================
+
+--------------------------------------------------------------
+ Key Metrics
+--------------------------------------------------------------
+  Scenario 1  TCP baseline:      93.75 Mbps
+  Scenario 1  UDP baseline:      99.98 Mbps
+  Scenario 1  TCP 4 streams:     94.43 Mbps
+  Scenario 2  h2→h1 allowed:    95.02 Mbps
+  Scenario 2  h3→h1 blocked:     0.00 Mbps
+  Scenario 3  h2 unlimited:     95.00 Mbps
+  Scenario 3  h3 2Mbps limit:    2.08 Mbps
+  Scenario 3  h4 5Mbps limit:    5.01 Mbps
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  All Done                                                ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[0;32mCheck /home/nimay/Desktop/bandwidth-analysis-sdn/results for JSON results and graphs.[0m
+Fri Apr 17 11:03:10 AM IST 2026: Starting full test suite with POX
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Scenario 1: Forwarding & Throughput                     ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[1;33m[STEP] Running scenario1_forwarding.py ...[0m
+(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+*** Configuring hosts
+h1 h2 
+*** Starting controller
+
+*** Starting 1 switches
+s1 (100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+...(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+
+*** Ping: testing ping reachability
+h1 -> h2 
+h2 -> h1 
+*** Results: 0% dropped (2/2 received)
+*** Stopping 0 controllers
+
+*** Stopping 2 links
+..
+*** Stopping 1 switches
+s1 
+*** Stopping 2 hosts
+h1 h2 
+*** Done
+[0;32m[OK]   Scenario 1 complete[0m
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Scenario 2: Firewall (Allowed vs Blocked)               ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[1;33m[STEP] Running scenario2_firewall.py ...[0m
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+*** Configuring hosts
+h1 h2 h3 
+*** Starting controller
+
+*** Starting 1 switches
+s1 (100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+...(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+
+*** Ping: testing ping reachability
+h1 -> h2 h3 
+h2 -> h1 h3 
+h3 -> h1 h2 
+*** Results: 0% dropped (6/6 received)
+*** Stopping 0 controllers
+
+*** Stopping 3 links
+...
+*** Stopping 1 switches
+s1 
+*** Stopping 3 hosts
+h1 h2 h3 
+*** Done
+[0;32m[OK]   Scenario 2 complete[0m
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Scenario 3: QoS Rate Limiting                           ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[1;33m[STEP] Running scenario3_qos.py ...[0m
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+*** Configuring hosts
+h1 h2 h3 h4 
+*** Starting controller
+
+*** Starting 1 switches
+s1 (100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+...(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+
+*** Ping: testing ping reachability
+h1 -> h2 h3 h4 
+h2 -> h1 h3 h4 
+h3 -> h1 h2 h4 
+h4 -> h1 h2 h3 
+*** Results: 0% dropped (12/12 received)
+*** Stopping 0 controllers
+
+*** Stopping 4 links
+....
+*** Stopping 1 switches
+s1 
+*** Stopping 4 hosts
+h1 h2 h3 h4 
+*** Done
+[0;32m[OK]   Scenario 3 complete[0m
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Topology: Linear                                        ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[1;33m[STEP] Starting POX controller...[0m
+[1;33m[STEP] Running linear_topo.py ...[0m
+
+==============================================================
+ TOPOLOGY 1 — Linear Point-to-Point
+ h1(10.0.0.1) --[s1]-- h2(10.0.0.2)
+ bw=100 Mbps  delay=5ms
+==============================================================
+Unable to contact the remote controller at 127.0.0.1:6633
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+*** Configuring hosts
+h1 h2 
+*** Starting controller
+c0 
+*** Starting 1 switches
+s1 (100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+...(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+
+[*] Waiting for controller handshake (5s)...
+[*] Connectivity check:
+*** Ping: testing ping reachability
+h1 -> X 
+h2 -> X 
+*** Results: 100% dropped (0/2 received)
+
+  -- Baseline TCP --
+    [iperf3] TCP Baseline: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J
+    >> TCP Baseline: 0.00 Mbps
+
+  -- Baseline UDP --
+    [iperf3] UDP Baseline: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -u -b 100M
+    >> UDP Baseline: 99.99 Mbps
+
+  -- Parallel streams N=1 --
+    [iperf3] TCP 1 stream(s): iperf3 -c 10.0.0.1 -p 5201 -t 10 -J
+    >> TCP 1 stream(s): 94.62 Mbps
+
+  -- Parallel streams N=2 --
+    [iperf3] TCP 2 stream(s): iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -P 2
+    >> TCP 2 stream(s): 94.80 Mbps
+
+  -- Parallel streams N=4 --
+    [iperf3] TCP 4 stream(s): iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -P 4
+    >> TCP 4 stream(s): 94.89 Mbps
+
+  -- Parallel streams N=8 --
+    [iperf3] TCP 8 stream(s): iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -P 8
+    >> TCP 8 stream(s): 94.87 Mbps
+
+  -- Window size 16K --
+    [iperf3] TCP win=16K: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -w 16K
+    >> TCP win=16K: 7.21 Mbps
+
+  -- Window size 64K --
+    [iperf3] TCP win=64K: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -w 64K
+    >> TCP win=64K: 35.36 Mbps
+
+  -- Window size 128K --
+    [iperf3] TCP win=128K: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -w 128K
+    >> TCP win=128K: 70.83 Mbps
+
+  -- Window size 256K --
+    [iperf3] TCP win=256K: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -w 256K
+    >> TCP win=256K: 94.56 Mbps
+
+  -- Window size 512K --
+    [iperf3] TCP win=512K: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J -w 512K
+    >> TCP win=512K: 94.56 Mbps
+
+[*] Flow table (s1):
+
+*** Stopping 1 controllers
+c0 
+*** Stopping 2 links
+..
+*** Stopping 1 switches
+s1 
+*** Stopping 2 hosts
+h1 h2 
+*** Done
+[*] Results saved -> /tmp/sdn_results/topology1_linear_results.json
+[0;32m[OK]   Linear complete[0m
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Topology: Star                                          ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[1;33m[STEP] Starting POX controller...[0m
+[1;33m[STEP] Running star_topo.py ...[0m
+
+==============================================================
+ TOPOLOGY 2 — Star
+        h1 (server)
+         |[s1]
+ h2  h3  h4 (clients)
+ bw=100 Mbps  delay=2ms
+==============================================================
+Unable to contact the remote controller at 127.0.0.1:6633
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+*** Configuring hosts
+h1 h2 h3 h4 
+*** Starting controller
+c0 
+*** Starting 1 switches
+s1 (100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+...(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 2ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+
+[*] Waiting for controller handshake (5s)...
+[*] Connectivity check:
+*** Ping: testing ping reachability
+h1 -> X X X 
+h2 -> h1 h3 h4 
+h3 -> h1 h2 h4 
+h4 -> h1 h2 h3 
+*** Results: 25% dropped (9/12 received)
+
+  -- Sequential: h2 -> h1 --
+    [iperf3] h2->h1 seq: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J
+    >> h2->h1 seq: 95.20 Mbps
+
+  -- Sequential: h3 -> h1 --
+    [iperf3] h3->h1 seq: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J
+    >> h3->h1 seq: 95.31 Mbps
+
+  -- Sequential: h4 -> h1 --
+    [iperf3] h4->h1 seq: iperf3 -c 10.0.0.1 -p 5201 -t 10 -J
+    >> h4->h1 seq: 95.26 Mbps
+
+[*] Flow table (s1):
+
+*** Stopping 1 controllers
+c0 
+*** Stopping 4 links
+....
+*** Stopping 1 switches
+s1 
+*** Stopping 4 hosts
+h1 h2 h3 h4 
+*** Done
+[*] Results saved -> /tmp/sdn_results/topology2_star_results.json
+[0;32m[OK]   Star complete[0m
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Topology: Tree                                          ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[1;33m[STEP] Starting POX controller...[0m
+[1;33m[STEP] Running tree_topo.py ...[0m
+/home/nimay/Desktop/bandwidth-analysis-sdn/topologies/tree_topo.py:2: SyntaxWarning: invalid escape sequence '\ '
+  """
+
+==============================================================
+ TOPOLOGY 3 — Tree (2 levels)
+         [s1]  (core)
+        /     \
+     [s2]     [s3]
+     / \       / \
+   h1   h2   h3   h4
+ bw=100 Mbps  edge_delay=3ms  core_delay=5ms
+==============================================================
+Unable to contact the remote controller at 127.0.0.1:6633
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+*** Configuring hosts
+h1 h2 h3 h4 
+*** Starting controller
+c0 
+*** Starting 3 switches
+s1 (100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+s2 (100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+s3 (100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+...(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 5ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+(100.00Mbit 3ms delay 0.00000% loss) *** Error: Warning: sch_htb: quantum of class 50001 is big. Consider r2q change.
+
+[*] Waiting for controller handshake (5s)...
+[*] Connectivity check:
+*** Ping: testing ping reachability
+h1 -> X X X 
+h2 -> h1 h3 h4 
+h3 -> h1 h2 h4 
+h4 -> h1 h2 h3 
+*** Results: 25% dropped (9/12 received)
+
+  -- Intra: h1 -> h2 (same subtree, ~1 hop) --
+    [iperf3] h1->h2 intra-left: iperf3 -c 10.0.0.2 -p 5201 -t 10 -J
+    >> h1->h2 intra-left: 95.02 Mbps
+
+  -- Intra: h3 -> h4 (same subtree, ~1 hop) --
+    [iperf3] h3->h4 intra-right: iperf3 -c 10.0.0.4 -p 5201 -t 10 -J
+    >> h3->h4 intra-right: 95.12 Mbps
+
+  -- Inter: h1 -> h3 (cross-subtree, ~3 hops) --
+    [iperf3] h1->h3 inter-subtree: iperf3 -c 10.0.0.3 -p 5201 -t 10 -J
+    >> h1->h3 inter-subtree: 93.99 Mbps
+
+  -- Inter: h2 -> h4 (cross-subtree, ~3 hops) --
+    [iperf3] h2->h4 inter-subtree: iperf3 -c 10.0.0.4 -p 5201 -t 10 -J
+    >> h2->h4 inter-subtree: 94.00 Mbps
+
+  -- Inter: h1 -> h3 UDP --
+    [iperf3] h1->h3 UDP inter: iperf3 -c 10.0.0.3 -p 5201 -t 10 -J -u -b 100M
+    >> h1->h3 UDP inter: 99.99 Mbps
+
+  -- Ping: h1 -> h2 (intra-left, ~1 hops) --
+PING 10.0.0.2 (10.0.0.2) 56(84) bytes of data.
+64 bytes from 10.0.0.2: icmp_seq=1 ttl=64 time=13.7 ms
+64 bytes from 10.0.0.2: icmp_seq=2 ttl=64 time=14.7 ms
+64 bytes from 10.0.0.2: icmp_seq=3 ttl=64 time=15.1 ms
+64 bytes from 10.0.0.2: icmp_seq=4 ttl=64 time=13.9 ms
+64 bytes from 10.0.0.2: icmp_seq=5 ttl=64 time=15.1 ms
+64 bytes from 10.0.0.2: icmp_seq=6 ttl=64 time=15.1 ms
+64 bytes from 10.0.0.2: icmp_seq=7 ttl=64 time=14.4 ms
+64 bytes from 10.0.0.2: icmp_seq=8 ttl=64 time=15.2 ms
+64 bytes from 10.0.0.2: icmp_seq=9 ttl=64 time=15.1 ms
+64 bytes from 10.0.0.2: icmp_seq=10 ttl=64 time=15.2 ms
+
+--- 10.0.0.2 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 1836ms
+rtt min/avg/max/mdev = 13.719/14.745/15.207/0.536 ms
+
+
+  -- Ping: h3 -> h4 (intra-right, ~1 hops) --
+PING 10.0.0.4 (10.0.0.4) 56(84) bytes of data.
+64 bytes from 10.0.0.4: icmp_seq=1 ttl=64 time=23.5 ms
+64 bytes from 10.0.0.4: icmp_seq=2 ttl=64 time=15.2 ms
+64 bytes from 10.0.0.4: icmp_seq=3 ttl=64 time=15.0 ms
+64 bytes from 10.0.0.4: icmp_seq=4 ttl=64 time=15.2 ms
+64 bytes from 10.0.0.4: icmp_seq=5 ttl=64 time=15.2 ms
+64 bytes from 10.0.0.4: icmp_seq=6 ttl=64 time=15.2 ms
+64 bytes from 10.0.0.4: icmp_seq=7 ttl=64 time=15.3 ms
+64 bytes from 10.0.0.4: icmp_seq=8 ttl=64 time=14.8 ms
+64 bytes from 10.0.0.4: icmp_seq=9 ttl=64 time=15.2 ms
+64 bytes from 10.0.0.4: icmp_seq=10 ttl=64 time=15.2 ms
+
+--- 10.0.0.4 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 1836ms
+rtt min/avg/max/mdev = 14.849/15.971/23.473/2.503 ms
+
+
+  -- Ping: h1 -> h3 (inter, ~3 hops) --
+PING 10.0.0.3 (10.0.0.3) 56(84) bytes of data.
+64 bytes from 10.0.0.3: icmp_seq=1 ttl=64 time=43.1 ms
+64 bytes from 10.0.0.3: icmp_seq=2 ttl=64 time=39.1 ms
+64 bytes from 10.0.0.3: icmp_seq=3 ttl=64 time=40.2 ms
+64 bytes from 10.0.0.3: icmp_seq=4 ttl=64 time=39.5 ms
+64 bytes from 10.0.0.3: icmp_seq=5 ttl=64 time=40.0 ms
+64 bytes from 10.0.0.3: icmp_seq=6 ttl=64 time=38.5 ms
+64 bytes from 10.0.0.3: icmp_seq=7 ttl=64 time=39.6 ms
+64 bytes from 10.0.0.3: icmp_seq=8 ttl=64 time=39.8 ms
+64 bytes from 10.0.0.3: icmp_seq=9 ttl=64 time=38.9 ms
+64 bytes from 10.0.0.3: icmp_seq=10 ttl=64 time=39.5 ms
+
+--- 10.0.0.3 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 1825ms
+rtt min/avg/max/mdev = 38.496/39.815/43.089/1.193 ms
+
+
+  -- Ping: h2 -> h4 (inter, ~3 hops) --
+PING 10.0.0.4 (10.0.0.4) 56(84) bytes of data.
+64 bytes from 10.0.0.4: icmp_seq=1 ttl=64 time=42.1 ms
+64 bytes from 10.0.0.4: icmp_seq=2 ttl=64 time=39.8 ms
+64 bytes from 10.0.0.4: icmp_seq=3 ttl=64 time=42.7 ms
+64 bytes from 10.0.0.4: icmp_seq=4 ttl=64 time=40.2 ms
+64 bytes from 10.0.0.4: icmp_seq=5 ttl=64 time=39.1 ms
+64 bytes from 10.0.0.4: icmp_seq=6 ttl=64 time=39.5 ms
+64 bytes from 10.0.0.4: icmp_seq=7 ttl=64 time=37.8 ms
+64 bytes from 10.0.0.4: icmp_seq=8 ttl=64 time=40.2 ms
+64 bytes from 10.0.0.4: icmp_seq=9 ttl=64 time=41.4 ms
+64 bytes from 10.0.0.4: icmp_seq=10 ttl=64 time=39.9 ms
+
+--- 10.0.0.4 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 1823ms
+rtt min/avg/max/mdev = 37.789/40.276/42.709/1.379 ms
+
+
+[*] Flow table (s1):
+
+
+[*] Flow table (s2):
+
+
+[*] Flow table (s3):
+
+*** Stopping 1 controllers
+c0 
+*** Stopping 6 links
+......
+*** Stopping 3 switches
+s1 s2 s3 
+*** Stopping 4 hosts
+h1 h2 h3 h4 
+*** Done
+[*] Results saved -> /tmp/sdn_results/topology3_tree_results.json
+[0;32m[OK]   Tree complete[0m
+[cleanup] Resetting Mininet and POX state...
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  Generating Analysis Graphs                              ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+
+==============================================================
+ BANDWIDTH MEASUREMENT & ANALYSIS — RESULTS SUMMARY
+==============================================================
+
+--------------------------------------------------------------
+ Key Metrics
+--------------------------------------------------------------
+  Scenario 1  TCP baseline:      93.75 Mbps
+  Scenario 1  UDP baseline:      99.98 Mbps
+  Scenario 1  TCP 4 streams:     93.56 Mbps
+  Scenario 2  h2→h1 allowed:    93.86 Mbps
+  Scenario 2  h3→h1 blocked:     0.00 Mbps
+  Scenario 3  h2 unlimited:     95.00 Mbps
+  Scenario 3  h3 2Mbps limit:    0.00 Mbps
+  Scenario 3  h4 5Mbps limit:    5.01 Mbps
+
+[0;34m╔══════════════════════════════════════════════════════════╗[0m
+[0;34m║  All Done                                                ║[0m
+[0;34m╚══════════════════════════════════════════════════════════╝[0m
+
+[0;32mCheck /home/nimay/Desktop/bandwidth-analysis-sdn/results for JSON results and graphs.[0m

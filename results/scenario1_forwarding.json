@@ -1,0 +1,23 @@
+{
+  "scenario": "forwarding",
+  "tests": {
+    "tcp_baseline": {
+      "label": "TCP Baseline",
+      "summary": {
+        "Mbps": 93.746
+      }
+    },
+    "udp_baseline": {
+      "label": "UDP Baseline",
+      "summary": {
+        "Mbps": 99.98
+      }
+    },
+    "tcp_parallel": {
+      "label": "TCP 4 Streams",
+      "summary": {
+        "Mbps": 93.559
+      }
+    }
+  }
+}

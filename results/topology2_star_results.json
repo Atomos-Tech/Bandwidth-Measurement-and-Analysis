@@ -1,0 +1,81 @@
+{
+  "topology": "star",
+  "bw_mbps": 100,
+  "delay": "2ms",
+  "ping_loss_pct": 0.0,
+  "tests": {
+    "sequential": {
+      "seq_h2": {
+        "label": "h2->h1 (seq)",
+        "summary": {
+          "Mbps": 94.31
+        }
+      },
+      "seq_h3": {
+        "label": "h3->h1 (seq)",
+        "summary": {
+          "Mbps": 93.87
+        }
+      },
+      "seq_h4": {
+        "label": "h4->h1 (seq)",
+        "summary": {
+          "Mbps": 94.12
+        }
+      }
+    },
+    "simultaneous": {
+      "simul_h2": {
+        "label": "h2->h1 (simul)",
+        "Mbps": 31.42,
+        "summary": {
+          "Mbps": 31.42
+        }
+      },
+      "simul_h3": {
+        "label": "h3->h1 (simul)",
+        "Mbps": 30.87,
+        "summary": {
+          "Mbps": 30.87
+        }
+      },
+      "simul_h4": {
+        "label": "h4->h1 (simul)",
+        "Mbps": 31.21,
+        "summary": {
+          "Mbps": 31.21
+        }
+      }
+    },
+    "firewall": {
+      "allowed_h2": {
+        "label": "h2->h1 ALLOWED",
+        "status": "allowed",
+        "summary": {
+          "Mbps": 91.34
+        }
+      },
+      "blocked_h3": {
+        "label": "h3->h1 BLOCKED",
+        "status": "blocked",
+        "summary": {
+          "Mbps": 0.0
+        }
+      }
+    },
+    "qos": {
+      "unlimited_h2": {
+        "label": "h2 Unlimited",
+        "summary": {
+          "Mbps": 92.17
+        }
+      },
+      "limited_h3": {
+        "label": "h3 2Mbps",
+        "summary": {
+          "Mbps": 1.94
+        }
+      }
+    }
+  }
+}

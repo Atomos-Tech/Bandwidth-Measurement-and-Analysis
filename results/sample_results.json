@@ -1,0 +1,263 @@
+{
+  "_note": "Pre-populated sample results for graph generation and demo purposes. Replace with real results from running the test scripts.",
+  "scenario1_forwarding": {
+    "scenario": "forwarding",
+    "description": "MAC learning, flow installation, TCP/UDP throughput",
+    "timestamp": "2025-01-15T14:32:00",
+    "tests": {
+      "ping_h1_h2": "PING 10.0.0.2: 5 packets transmitted, 5 received, 0% packet loss, time 800ms\nrtt min/avg/max/mdev = 10.12/10.45/11.23/0.34 ms",
+      "tcp_baseline": {
+        "label": "TCP Baseline (10s)",
+        "protocol": "TCP",
+        "parallel": 1,
+        "duration": 10,
+        "summary": { "Mbps": 93.42, "retransmits": 2 },
+        "intervals": [
+          {"start": 0.0, "Mbps": 91.2}, {"start": 1.0, "Mbps": 94.1},
+          {"start": 2.0, "Mbps": 92.8}, {"start": 3.0, "Mbps": 95.3},
+          {"start": 4.0, "Mbps": 93.7}, {"start": 5.0, "Mbps": 94.0},
+          {"start": 6.0, "Mbps": 92.1}, {"start": 7.0, "Mbps": 93.5},
+          {"start": 8.0, "Mbps": 94.2}, {"start": 9.0, "Mbps": 93.0}
+        ]
+      },
+      "udp_baseline": {
+        "label": "UDP Baseline (10s)",
+        "protocol": "UDP",
+        "parallel": 1,
+        "duration": 10,
+        "summary": { "Mbps": 97.82, "jitter_ms": 0.23, "lost_pct": 0.12 },
+        "intervals": [
+          {"start": 0.0, "Mbps": 97.5}, {"start": 1.0, "Mbps": 98.1},
+          {"start": 2.0, "Mbps": 97.8}, {"start": 3.0, "Mbps": 98.3},
+          {"start": 4.0, "Mbps": 97.6}, {"start": 5.0, "Mbps": 98.0},
+          {"start": 6.0, "Mbps": 97.9}, {"start": 7.0, "Mbps": 98.2},
+          {"start": 8.0, "Mbps": 97.7}, {"start": 9.0, "Mbps": 97.8}
+        ]
+      },
+      "tcp_parallel_4": {
+        "label": "TCP 4 streams (10s)",
+        "protocol": "TCP",
+        "parallel": 4,
+        "duration": 10,
+        "summary": { "Mbps": 95.71, "retransmits": 7 },
+        "intervals": [
+          {"start": 0.0, "Mbps": 90.4}, {"start": 1.0, "Mbps": 95.2},
+          {"start": 2.0, "Mbps": 96.1}, {"start": 3.0, "Mbps": 95.8},
+          {"start": 4.0, "Mbps": 96.3}, {"start": 5.0, "Mbps": 95.9},
+          {"start": 6.0, "Mbps": 96.0}, {"start": 7.0, "Mbps": 95.7},
+          {"start": 8.0, "Mbps": 95.4}, {"start": 9.0, "Mbps": 96.2}
+        ]
+      },
+      "tcp_reverse": {
+        "label": "TCP reverse h2->h1",
+        "protocol": "TCP",
+        "summary": { "Mbps": 92.88, "retransmits": 3 },
+        "intervals": [
+          {"start": 0.0, "Mbps": 91.0}, {"start": 1.0, "Mbps": 93.2},
+          {"start": 2.0, "Mbps": 92.8}, {"start": 3.0, "Mbps": 93.5},
+          {"start": 4.0, "Mbps": 92.6}, {"start": 5.0, "Mbps": 93.1},
+          {"start": 6.0, "Mbps": 92.9}, {"start": 7.0, "Mbps": 93.3},
+          {"start": 8.0, "Mbps": 92.7}, {"start": 9.0, "Mbps": 93.0}
+        ]
+      }
+    },
+    "flow_table_before": " cookie=0x0, duration=2.1s, table=0, n_packets=0, n_bytes=0, priority=0,actions=CONTROLLER:65535",
+    "flow_table_after_ping": " cookie=0x0, duration=5.3s, table=0, n_packets=10, n_bytes=980, priority=10,in_port=1,dl_src=00:00:00:00:00:01,dl_dst=00:00:00:00:00:02,actions=output:2\n cookie=0x0, duration=5.1s, table=0, n_packets=10, n_bytes=980, priority=10,in_port=2,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:01,actions=output:1",
+    "flow_table_final": " cookie=0x0, duration=45.2s, table=0, n_packets=1243810, n_bytes=9876543210, priority=10,in_port=1,dl_src=00:00:00:00:00:01,dl_dst=00:00:00:00:00:02,actions=output:2\n cookie=0x0, duration=45.0s, table=0, n_packets=1198234, n_bytes=9234567890, priority=10,in_port=2,dl_src=00:00:00:00:00:02,dl_dst=00:00:00:00:00:01,actions=output:1\n cookie=0x0, duration=60.0s, table=0, n_packets=25, n_bytes=2100, priority=0,actions=CONTROLLER:65535"
+  },
+
+  "scenario2_firewall": {
+    "scenario": "firewall",
+    "description": "SDN firewall: allow h2, block h3 iperf3 TCP to h1",
+    "timestamp": "2025-01-15T14:55:00",
+    "firewall_rules": [
+      "DROP: src=10.0.0.3 dst=10.0.0.1 proto=TCP dport=5201",
+      "DROP: src=10.0.0.1 dst=10.0.0.3 proto=TCP sport=5201"
+    ],
+    "tests": {
+      "allowed_h2_to_h1": {
+        "label": "h2->h1 TCP",
+        "status": "allowed",
+        "Mbps": 91.34,
+        "summary": { "Mbps": 91.34 }
+      },
+      "blocked_h3_to_h1": {
+        "label": "h3->h1 TCP",
+        "status": "blocked",
+        "Mbps": 0.0,
+        "summary": { "Mbps": 0.0 }
+      },
+      "allowed_h4_to_h2": {
+        "label": "h4->h2 TCP",
+        "status": "allowed",
+        "Mbps": 89.72,
+        "summary": { "Mbps": 89.72 }
+      },
+      "ping_h3_to_h1": {
+        "label": "h3->h1 ICMP",
+        "success": true,
+        "rtt_avg": 2.45,
+        "raw": "5 packets transmitted, 5 received, 0% packet loss\nrtt min/avg/max/mdev = 2.12/2.45/2.89/0.23 ms"
+      },
+      "ping_h2_to_h1": {
+        "label": "h2->h1 ICMP",
+        "success": true,
+        "rtt_avg": 2.31,
+        "raw": "5 packets transmitted, 5 received, 0% packet loss"
+      }
+    },
+    "verdicts": [
+      {"test": "h2->h1 TCP ALLOWED", "verdict": "\u2714  PASS", "expected": "allowed",  "actual": "allowed"},
+      {"test": "h3->h1 TCP BLOCKED", "verdict": "\u2714  PASS", "expected": "blocked",  "actual": "blocked"},
+      {"test": "h4->h2 TCP ALLOWED", "verdict": "\u2714  PASS", "expected": "allowed",  "actual": "allowed"},
+      {"test": "h3->h1 ICMP ALLOWED","verdict": "\u2714  PASS", "expected": "allowed",  "actual": "allowed"}
+    ],
+    "summary": { "passed": 4, "total": 4 },
+    "flow_table_startup": " cookie=0x0, priority=200, tcp,nw_src=10.0.0.3,nw_dst=10.0.0.1,tp_dst=5201 actions=drop\n cookie=0x0, priority=200, tcp,nw_src=10.0.0.1,nw_dst=10.0.0.3,tp_src=5201 actions=drop\n cookie=0x0, priority=0, actions=CONTROLLER:65535"
+  },
+
+  "scenario3_qos": {
+    "scenario": "qos",
+    "description": "OpenFlow meter-based rate limiting",
+    "timestamp": "2025-01-15T15:18:00",
+    "qos_config": {
+      "h2": {"limit_mbps": null, "meter_id": null},
+      "h3": {"limit_mbps": 2,   "meter_id": 1},
+      "h4": {"limit_mbps": 5,   "meter_id": 2}
+    },
+    "tests": {
+      "unlimited_h2": {
+        "label": "h2->h1 Unlimited",
+        "Mbps": 92.17,
+        "summary": {"Mbps": 92.17, "retransmits": 4},
+        "intervals": [
+          {"start": 0.0, "Mbps": 88.5}, {"start": 1.0, "Mbps": 93.2},
+          {"start": 2.0, "Mbps": 92.8}, {"start": 3.0, "Mbps": 93.5},
+          {"start": 4.0, "Mbps": 91.9}, {"start": 5.0, "Mbps": 92.4}
+        ]
+      },
+      "limited_h3": {
+        "label": "h3->h1 Rate-Limited 2Mbps",
+        "Mbps": 1.94,
+        "summary": {"Mbps": 1.94, "retransmits": 0},
+        "intervals": [
+          {"start": 0.0, "Mbps": 1.92}, {"start": 1.0, "Mbps": 1.95},
+          {"start": 2.0, "Mbps": 1.94}, {"start": 3.0, "Mbps": 1.93},
+          {"start": 4.0, "Mbps": 1.96}, {"start": 5.0, "Mbps": 1.94}
+        ]
+      },
+      "limited_h4": {
+        "label": "h4->h1 Rate-Limited 5Mbps",
+        "Mbps": 4.87,
+        "summary": {"Mbps": 4.87, "retransmits": 0},
+        "intervals": [
+          {"start": 0.0, "Mbps": 4.85}, {"start": 1.0, "Mbps": 4.89},
+          {"start": 2.0, "Mbps": 4.87}, {"start": 3.0, "Mbps": 4.88},
+          {"start": 4.0, "Mbps": 4.86}, {"start": 5.0, "Mbps": 4.87}
+        ]
+      },
+      "simultaneous_qos": {
+        "h2": {"Mbps": 89.21},
+        "h3": {"Mbps": 1.93}
+      }
+    },
+    "meters_dump": " OFPST_METER_CONFIG reply:\n meter=1 flags=kbps bands=\n type=drop rate=2000 burst_size=200\n meter=2 flags=kbps bands=\n type=drop rate=5000 burst_size=500"
+  },
+
+  "topology1_linear_results": {
+    "topology": "linear",
+    "bw_mbps": 100,
+    "delay": "5ms",
+    "ping_loss_pct": 0.0,
+    "tests": {
+      "baseline": {
+        "tcp_baseline": {
+          "label": "TCP Baseline",
+          "protocol": "TCP",
+          "summary": {"Mbps": 93.42, "retransmits": 2},
+          "intervals": [
+            {"start": 0.0, "Mbps": 91.2}, {"start": 1.0, "Mbps": 94.1},
+            {"start": 2.0, "Mbps": 92.8}, {"start": 3.0, "Mbps": 95.3},
+            {"start": 4.0, "Mbps": 93.7}, {"start": 5.0, "Mbps": 94.0},
+            {"start": 6.0, "Mbps": 92.1}, {"start": 7.0, "Mbps": 93.5},
+            {"start": 8.0, "Mbps": 94.2}, {"start": 9.0, "Mbps": 93.0}
+          ]
+        },
+        "udp_baseline": {
+          "label": "UDP Baseline",
+          "protocol": "UDP",
+          "summary": {"Mbps": 97.82, "jitter_ms": 0.23, "lost_pct": 0.12},
+          "intervals": [
+            {"start": 0.0, "Mbps": 97.5}, {"start": 1.0, "Mbps": 98.1},
+            {"start": 2.0, "Mbps": 97.8}, {"start": 3.0, "Mbps": 98.3},
+            {"start": 4.0, "Mbps": 97.6}, {"start": 5.0, "Mbps": 98.0}
+          ]
+        }
+      },
+      "parallel_streams": {
+        "parallel_1": {"label": "TCP 1 stream",  "summary": {"Mbps": 93.42}},
+        "parallel_2": {"label": "TCP 2 streams", "summary": {"Mbps": 94.81}},
+        "parallel_4": {"label": "TCP 4 streams", "summary": {"Mbps": 95.71}},
+        "parallel_8": {"label": "TCP 8 streams", "summary": {"Mbps": 96.12}}
+      },
+      "window_sizes": {
+        "window_16K":  {"label": "TCP win=16K",  "summary": {"Mbps": 52.34}},
+        "window_64K":  {"label": "TCP win=64K",  "summary": {"Mbps": 81.76}},
+        "window_128K": {"label": "TCP win=128K", "summary": {"Mbps": 90.23}},
+        "window_256K": {"label": "TCP win=256K", "summary": {"Mbps": 93.14}},
+        "window_512K": {"label": "TCP win=512K", "summary": {"Mbps": 93.89}}
+      }
+    }
+  },
+
+  "topology2_star_results": {
+    "topology": "star",
+    "bw_mbps": 100,
+    "delay": "2ms",
+    "ping_loss_pct": 0.0,
+    "tests": {
+      "sequential": {
+        "seq_h2": {"label": "h2->h1 (seq)", "summary": {"Mbps": 94.31}},
+        "seq_h3": {"label": "h3->h1 (seq)", "summary": {"Mbps": 93.87}},
+        "seq_h4": {"label": "h4->h1 (seq)", "summary": {"Mbps": 94.12}}
+      },
+      "simultaneous": {
+        "simul_h2": {"label": "h2->h1 (simul)", "Mbps": 31.42, "summary": {"Mbps": 31.42}},
+        "simul_h3": {"label": "h3->h1 (simul)", "Mbps": 30.87, "summary": {"Mbps": 30.87}},
+        "simul_h4": {"label": "h4->h1 (simul)", "Mbps": 31.21, "summary": {"Mbps": 31.21}}
+      },
+      "firewall": {
+        "allowed_h2": {"label": "h2->h1 ALLOWED", "status": "allowed", "summary": {"Mbps": 91.34}},
+        "blocked_h3": {"label": "h3->h1 BLOCKED", "status": "blocked", "summary": {"Mbps": 0.0}}
+      },
+      "qos": {
+        "unlimited_h2": {"label": "h2 Unlimited", "summary": {"Mbps": 92.17}},
+        "limited_h3":   {"label": "h3 2Mbps",     "summary": {"Mbps": 1.94}}
+      }
+    }
+  },
+
+  "topology3_tree_results": {
+    "topology": "tree",
+    "bw_mbps": 100,
+    "delay": "3ms",
+    "ping_loss_pct": 0.0,
+    "tests": {
+      "intra_subtree": {
+        "h1_to_h2": {"label": "h1->h2 intra-left",  "summary": {"Mbps": 91.23}},
+        "h3_to_h4": {"label": "h3->h4 intra-right", "summary": {"Mbps": 90.87}}
+      },
+      "inter_subtree": {
+        "h1_to_h3":     {"label": "h1->h3 inter",    "summary": {"Mbps": 88.41}},
+        "h2_to_h4":     {"label": "h2->h4 inter",    "summary": {"Mbps": 87.92}},
+        "h1_to_h3_udp": {"label": "h1->h3 UDP",      "summary": {"Mbps": 95.67, "jitter_ms": 0.41}}
+      },
+      "ping_rtt": {
+        "h1_to_h2": {"rtt_avg": 6.23,  "hops": 1},
+        "h3_to_h4": {"rtt_avg": 6.18,  "hops": 1},
+        "h1_to_h3": {"rtt_avg": 16.54, "hops": 3},
+        "h2_to_h4": {"rtt_avg": 16.71, "hops": 3}
+      }
+    }
+  }
+}

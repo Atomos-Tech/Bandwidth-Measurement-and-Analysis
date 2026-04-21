@@ -1,0 +1,15 @@
+{
+  "scenario": "firewall",
+  "tests": {
+    "allowed_h2_to_h1": {
+      "label": "h2->h1 TCP",
+      "status": "allowed",
+      "Mbps": 93.859
+    },
+    "blocked_h3_to_h1": {
+      "label": "h3->h1 TCP",
+      "status": "blocked",
+      "Mbps": 0.0
+    }
+  }
+}

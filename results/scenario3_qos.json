@@ -1,0 +1,17 @@
+{
+  "scenario": "qos",
+  "tests": {
+    "unlimited_h2": {
+      "label": "h2->h1 Unlimited",
+      "Mbps": 95.005
+    },
+    "limited_h3": {
+      "label": "h3->h1 QoS 2Mbps",
+      "Mbps": 0.0
+    },
+    "limited_h4": {
+      "label": "h4->h1 QoS 5Mbps",
+      "Mbps": 5.009
+    }
+  }
+}
