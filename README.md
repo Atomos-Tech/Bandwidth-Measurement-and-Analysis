@@ -47,7 +47,6 @@ Run these three commands from the project root:
 ```bash
 sudo bash setup.sh
 sudo bash tests/run_all.sh
-sudo python3 analysis/analyze_results.py
 ```
 
 What each command does:
@@ -55,9 +54,6 @@ What each command does:
    Installs/repairs environment dependencies (Mininet, OVS, POX, Python packages).
 2. `sudo bash tests/run_all.sh`
    Runs all scenarios and topology scripts, then triggers analysis.
-3. `sudo python3 analysis/analyze_results.py`
-   Regenerates result summary and graph artifacts explicitly (optional).
-
 ---
 
 ## 4) Expected Output
