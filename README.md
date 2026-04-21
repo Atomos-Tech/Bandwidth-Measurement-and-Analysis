@@ -46,7 +46,7 @@ Scenarios tested:
 ### One-shot setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/bandwidth-analysis-sdn.git
+git clone https://github.com/Atomos-Tech/Bandwidth-Measurement-and-Analysis.git
 cd bandwidth-analysis-sdn
 sudo bash setup.sh
 ```
