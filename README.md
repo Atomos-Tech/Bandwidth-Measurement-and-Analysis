@@ -56,7 +56,7 @@ What each command does:
 2. `sudo bash tests/run_all.sh`
    Runs all scenarios and topology scripts, then triggers analysis.
 3. `sudo python3 analysis/analyze_results.py`
-   Regenerates result summary and graph artifacts explicitly.
+   Regenerates result summary and graph artifacts explicitly (optional).
 
 ---
 
