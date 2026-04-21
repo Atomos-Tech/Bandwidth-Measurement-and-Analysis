@@ -1,24 +1,4 @@
-# Bandwidth Measurement and Analysis (4th Sem CN Project)
-
-This README is written based on the current code in this repository.
-Prepared as part of a 4th semester Computer Networks project submission.
-
-## Important Grading Note (Read First)
-
-This repo contains two SDN paths:
-
-1. **Active path used by scripts in this repo**
-   - `tests/run_all.sh` uses **POX** (`pox/pox.py forwarding.l2_learning`) for topology runs.
-   - `tests/scenario*.py` run Mininet in **standalone switch mode** (`controller=None`) and do not use an SDN controller process.
-   - Firewall in scenario 2 is injected with `ovs-ofctl`.
-   - QoS in scenario 3 is enforced using Linux `tc tbf` (host-side), not OpenFlow meters.
-
-2. **Optional path included in repo but not used by `run_all.sh`**
-   - `controller/bandwidth_controller.py` (Ryu, OpenFlow 1.3) exists, but current automation does not invoke it.
-
-If evaluation is based on actual code execution, this README matches that behavior.
-
----
+# Bandwidth Measurement and Analysis
 
 ## 1) Problem Statement
 
