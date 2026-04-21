@@ -58,14 +58,6 @@ sudo bash setup.sh
 - POX controller (fangtooth branch)
 - Python packages needed for analysis (`matplotlib`, `numpy`, `pyasyncore`)
 
-### Quick verification
-
-```bash
-mn --version
-iperf3 --version
-python3 pox/pox.py --help | head -n 3
-```
-
 ---
 
 ## 3) Execution Steps
@@ -122,15 +114,6 @@ These include test dictionaries and flow table dump strings from `ovs-ofctl dump
 - `results/graphs/bar_intra_vs_inter.png`
 - `results/graphs/bar_simultaneous.png`
 
-Notes:
-- Graph script reads files under `results/`.
-- Topology scripts write to `/tmp/sdn_results/`.
-- For topology graphs from fresh topology runs, copy files first:
-
-```bash
-cp /tmp/sdn_results/topology*_results.json results/
-python3 analysis/analyze_results.py
-```
 
 ### D. Runtime log
 
